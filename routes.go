@@ -16,8 +16,8 @@ func ScanRoutes(filepath string) {
 		log.Fatal(err)
 	}
 	//decode into a string-string map
-	var m map[string]string
-	err = json.NewDecoder(f).Decode(m)
+	var m = make(map[string]string)
+	err = json.NewDecoder(f).Decode(&m)
 	if err != nil {
 		log.Fatal(err)
 	}

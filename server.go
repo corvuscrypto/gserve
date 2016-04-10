@@ -9,5 +9,5 @@ import (
 //StartServer initializes a default server to begin handling requests via ggi handlers
 func StartServer() {
 	http.HandleFunc("/", ggi.HandleRequest)
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":8080", nil)
 }
